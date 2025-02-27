@@ -4,6 +4,8 @@ from django.db import models
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
+    artist = models.CharField(max_length=100, null=True)
+    url = models.URLField(null=True, max_length=200)
     image = models.URLField(max_length=200)
     body = models.TextField()
     created = models.DateTimeField(auto_now_add=True)

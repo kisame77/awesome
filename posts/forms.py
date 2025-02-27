@@ -7,7 +7,8 @@ from .models import Post
 class PostCreateForm(ModelForm):
     class Meta:
         model = Post
-        fields = "__all__"
+        # fields = "__all__"
+        fields = ["url", "body"]
         labels = {"body": "Caption"}
         widgets = {
             "body": forms.Textarea(
@@ -16,5 +17,6 @@ class PostCreateForm(ModelForm):
                     "placeholder": "Add a caption ...",
                     "class": "font1 text-4xl",
                 }
-            )
+            ),
+            "url": forms.TextInput(attrs={"placeholder": "Ad url ..."}),
         }
