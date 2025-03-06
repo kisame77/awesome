@@ -20,3 +20,15 @@ class PostCreateForm(ModelForm):
             ),
             "url": forms.TextInput(attrs={"placeholder": "Ad url ..."}),
         }
+
+
+class PostEditForm(ModelForm):
+    class Meta:
+        model = Post
+        fields = [
+            "body",
+        ]
+        labels = {
+            "body": "",
+        }
+        widgets = {"body": forms.Textarea(attrs={"rows": 3, "class": "font text-4xl"})}
