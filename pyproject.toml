@@ -12,3 +12,14 @@ dependencies = [
     "psycopg>=3.2.5",
     "requests>=2.32.3",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest-django>=4.10.0",
+    "ruff>=0.9.9",
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "core.settings"
+
+testpaths = ["posts/test_views.py"]

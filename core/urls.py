@@ -24,13 +24,15 @@ from posts.views import (
     post_delete_view,
     post_edit_view,
     post_page_view,
+    
 )
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", home_view, name="home"),
+    path("category/<str:tag>", home_view, name="category"),
     path("post/create/", post_create_view, name="post-create"),
-    path("post/delete/<pk>", post_delete_view, name="post-delete"),
-    path("post/edit/<pk>", post_edit_view, name="post-edit"),
-    path("post/<pk>", post_page_view, name="post"),
+    path("post/delete/<uuid:pk>", post_delete_view, name="post-delete"),
+    path("post/edit/<uuid:pk>", post_edit_view, name="post-edit"),
+    path("post/<uuid:pk>", post_page_view, name="post"),
 ]
