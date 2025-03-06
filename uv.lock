@@ -19,6 +19,7 @@ dependencies = [
     { name = "beautifulsoup4" },
     { name = "dj-database-url" },
     { name = "django" },
+    { name = "django-allauth" },
     { name = "django-extensions" },
     { name = "psycopg" },
     { name = "requests" },
@@ -35,6 +36,7 @@ requires-dist = [
     { name = "beautifulsoup4", specifier = ">=4.13.3" },
     { name = "dj-database-url", specifier = ">=2.3.0" },
     { name = "django", specifier = ">=5.1.6" },
+    { name = "django-allauth", specifier = ">=65.4.1" },
     { name = "django-extensions", specifier = ">=3.2.3" },
     { name = "psycopg", specifier = ">=3.2.5" },
     { name = "requests", specifier = ">=2.32.3" },
@@ -138,6 +140,16 @@ sdist = { url = "https://files.pythonhosted.org/packages/6d/e4/901f54ee114a08037
 wheels = [
     { url = "https://files.pythonhosted.org/packages/75/6f/d2c216d00975e2604b10940937b0ba6b2c2d9b3cc0cc633e414ae3f14b2e/Django-5.1.6-py3-none-any.whl", hash = "sha256:8d203400bc2952fbfb287c2bbda630297d654920c72a73cc82a9ad7926feaad5", size = 8277066 },
 ]
+
+[[package]]
+name = "django-allauth"
+version = "65.4.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "asgiref" },
+    { name = "django" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b1/e7/b3232c27da9f43e3db72d16addd90891ee233fa058ddd0588bafcded2ea7/django_allauth-65.4.1.tar.gz", hash = "sha256:60b32aef7dbbcc213319aa4fd8f570e985266ea1162ae6ef7a26a24efca85c8c", size = 1558220 }
 
 [[package]]
 name = "django-extensions"
